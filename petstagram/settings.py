@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-srfmi$7mc(i!#+y!)noprcp7bsr*^%zsxf#hv$74p_vko+twhk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["petstagramapp.azurewebsites.net"]
 
 # Application definition
 
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'petstagram.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'petstagramapp-database',
+        'USER': 'dcuvmmbicb',
+        'PASSWORD': '36OWHISIOA32OU22$',
+        'HOST': 'petstagramapp-server.postgres.database.azure.com',
+        'PORT': '5432',
     }
 }
 
