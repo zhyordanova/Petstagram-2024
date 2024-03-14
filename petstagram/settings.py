@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'petstagramapp-database',
         'USER': 'dcuvmmbicb',
         'PASSWORD': '36OWHISIOA32OU22$',
-        'HOST': 'petstagramapp-server.postgres.database.azure.com',
+        'HOST': 'petstagramapp.azurewebsites.net',
         'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',  # Or 'verify-ca' or 'verify-full' depending on your security requirements
