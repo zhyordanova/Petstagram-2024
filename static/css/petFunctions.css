@@ -7,14 +7,16 @@
 }
 
 .edit-delete {
-	display: block;
+	display: flex;
+	flex-direction: column;
+    justify-content: space-evenly;
 	background-color: rgb(255, 255, 255);
 	border: 1px solid rgb(156, 152, 152);
 	padding: 40px;
 	margin-bottom: 15px;
 	border-radius: 3px;
-	border: 1px solid;
 	box-shadow: 1px 2px 3px #888888;
+	height:55vh;
 }
 
 .edit-delete h2 {
@@ -57,9 +59,9 @@
 	color: white;
 }
 
-.edit-photo select {
+/* .edit-photo select {
 
-}
+} */
 
 .edit-photo label {
 	display: initial !important;

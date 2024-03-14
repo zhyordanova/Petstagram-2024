@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
-
 {% block content %}
+{% load static %}
+
     <!-- Starts Delete Pet Section -->
     <div class="edit-delete edit-photo">
         <h2>Delete pet</h2>
         <!-- Starts Delete Pet Form -->
-        <form method="post">
+        <form method="post" action="#">
             {% csrf_token %}
             {{ form.as_p }}
             <!-- Delete Pet Button -->

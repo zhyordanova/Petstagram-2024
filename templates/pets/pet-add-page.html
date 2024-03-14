@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-
 {% block content %}
+{% load static %}
+
     <!-- Start Add Pet Section-->
     <div class="edit-delete edit-photo">
         <h2>Add pet</h2>
 
         <!-- Start Add Pet Form -->
-        <form method="post">
+        <form method="post" action="">
             {% csrf_token %}
             {{ form.as_p }}
             <!-- Add Pet Button -->

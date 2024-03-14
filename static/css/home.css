@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand&family=Roboto&display=swap');
 
 * {
     margin: 0;
@@ -9,7 +9,7 @@
 
 body {
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu,
-        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     background: #fafafa;
     min-height: 100vh;
 }
@@ -25,8 +25,9 @@ body {
     align-items: center;
     justify-content: center;
     background: rgb(255, 255, 255);
-    width: 100%;
+    width: 101%;
     border: 1px solid rgb(218, 217, 217);
+    font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -85,7 +86,7 @@ body {
 .searchbar img {
     position: absolute;
     margin-left: -2.5rem;
-    margin-top: -0.8rem;
+    margin-top: -2.45rem;
 }
 
 .searchbar input::placeholder {
@@ -142,8 +143,9 @@ body {
 
 main {
     width: 100%;
+    min-height: 95vh;
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: center;
 }
 
@@ -239,7 +241,7 @@ main .container {
     color: #4d4d4f;
     font-weight: 500;
     line-height: 1em;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .col-9 .card .top .userDetails h3 span {
@@ -259,20 +261,20 @@ main .container {
     position: relative;
     width: 100%;
     min-height: 600px;
-    margin: 10px 0 15px;
 }
 
 .actionBtns {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 23px;
 }
 
-.actionBtns svg {
+.actionBtns i {
     cursor: pointer;
 }
 
-.actionBtns .left svg {
+.actionBtns .left i {
     margin-right: 8px;
 }
 
@@ -374,6 +376,10 @@ a {
     text-decoration: none;
 }
 
+i {
+    color: black;
+}
+
 .hidden {
     display: none;
 }
@@ -422,9 +428,13 @@ a {
 
 }
 
-.footer {
+div.footer {
+    position: sticky;
+    bottom: 0;
+    margin: 20px auto;
+    width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    z-index: -2;
 }
 
 .footer .footer-section {
@@ -437,4 +447,60 @@ a {
 
 .footer a:hover {
     color: #ff0000;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.step-links-buttons a,
+.step-links-buttons span.current {
+    font-size: 20px;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.step-links-buttons a:hover {
+    background-color: #3498db;
+}
+
+.step-links-buttons span.current {
+    cursor: default;
+    text-shadow: none;
+}
+
+.step-links-buttons a:first-child,
+.step-links-buttons a:last-child {
+    margin: 0;
+}
+
+.step-links-buttons {
+    display: flex;
+    text-shadow: none;
+}
+
+.step-links-buttons a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Style the button */
+.button {
+    background-color: white;
+    border: none;
+    font-size: 22px;
+    margin: 2.5px 0px 0px 8px;
+    padding: 0;
+    cursor: pointer;
 }
